@@ -3,7 +3,9 @@ require 'pry'
 
 class Station < Table_Butler
 
-  attr_accessor:name
+  attr_accessor:name, :id
+
+
 
 end
 

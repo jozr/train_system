@@ -16,4 +16,13 @@ describe Rider do
   it 'allows you to return all riders' do
     Rider.all.should eq [@test_rider]
   end
+
+  it "allows the rider to list all the lines for a single station" do
+    expect(@test_rider.list_lines(@test_station.id)).to eq [@test_line.id]
+  end
+
+  it "allows the rider to list all the stations for a single line" do
+    expect(@test_rider.list_stations(@test_line.id)).to eq [@test_station.id]
+  end
+
 end
