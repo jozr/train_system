@@ -16,4 +16,12 @@ describe Operator do
   it 'allows you to return all operators' do
     Operator.all.should eq [@test_operator]
   end
+
+  it 'allows the operator to create a station' do
+    expect(@test_operator.add_station("Foo Station")).to be_an_instance_of Station
+  end
+
+  it 'allows the operator to create a line' do
+    expect(@test_operator.add_line("Purple")).to be_an_instance_of Line
+  end
 end
